@@ -1,0 +1,23 @@
+[project]
+name = "books-scraper"
+version = "1.0.0"
+description = "Polite web scraper for books.toscrape.com with CSV / XLSX / JSON / Google Sheets export"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Kyrylo Dubovenko" }]
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31", "beautifulsoup4>=4.12", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+sheets = ["gspread>=6.0", "google-auth>=2.20"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+books-scraper = "books_scraper.cli:main"
+
+[tool.setuptools]
+packages = ["books_scraper"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

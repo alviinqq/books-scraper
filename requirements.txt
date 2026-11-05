@@ -1,0 +1,7 @@
+requests>=2.31
+beautifulsoup4>=4.12
+openpyxl>=3.1
+
+# Optional: Google Sheets export (--sheet). Uncomment or install manually:
+# gspread>=6.0
+# google-auth>=2.20
